@@ -19,6 +19,7 @@
     "deploy": "pnpm run build && wrangler deploy"
   },
   "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.6.19",
     "@cloudflare/vite-plugin": "^1.26.0",
     "@neondatabase/serverless": "^1.0.2",
     "@sentry/tanstackstart-react": "^10.42.0",

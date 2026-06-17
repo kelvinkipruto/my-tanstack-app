@@ -13,11 +13,11 @@ const config = defineConfig({
   plugins: [
     devtools(),
     neon,
-    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    !process.env.VITEST && cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tailwindcss(),
     tanstackStart(),
     viteReact(),
-  ],
+  ].filter(Boolean),
 })
 
 export default config
